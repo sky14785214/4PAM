@@ -134,6 +134,8 @@ for SNR in range(0,len(ArraySNR),1):
     snrLinear = 10**(ArraySNR[SNR]/10) # 每個 SNR 值的線性值
 
     encodedInput,input = Random_2bit(numTrans,1,encodedInput,input) # 隨機生成2位元亂數
+    print("encodedInput: ",encodedInput)
+    print("input: ",input)
     noisyOutput = AWGN(numTrans,snrLinear) # 通過 AWGN 信道傳輸
     encodedOutput= DetectorModelling(numTrans,noisyOutput,encodedOutput) # 探測器建模
     encodedOutput,output = Decoding(numTrans,encodedOutput,output,d) # 解碼
