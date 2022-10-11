@@ -167,3 +167,4 @@ plt.legend(loc = 'lower left')
 plt.axis([15,0,1,1e-5])
 plt.show()
 
+# 哈囉 你好嗎
